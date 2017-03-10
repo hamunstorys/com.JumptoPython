@@ -143,7 +143,7 @@ print(b)
 
 # 슬라이싱할 자료구조[시작 인덱스:슬라이싱할 인덱스의 범위]에서도 마이너스(-) 기호를 사용 가능하다.
 b = a[19:-7]
-print(b+"\n")
+print(b + "\n")
 
 # 슬라이싱으로 문자열 나누기0
 
@@ -161,7 +161,196 @@ year = a[:4]
 day = a[4:8]
 weather = a[8:]
 
-print(year+day+weather)
+print(year + day + weather + '\n')
 
 # 문자열 포매팅
 
+print('문자열 포매팅\n')
+
+# 문자열 포매팅 따라하기
+
+# 1.숫자 바로 대입
+
+print("I eat %d apples." % 3)
+
+# 2.문자열에 바로 대입
+
+print("I eat %s apples." % "five")
+
+# 3.숫자 값을 나타내는 변수로 대입
+number = 3
+print("I eat %d apples." % number)
+
+# 4.2개 이상의 값을 넣기
+number = 10
+day = "three"
+print("I ate %d apples. so I was sick for %s days." % (number, day))
+
+# %s 포맷 코드는 어떤 형태의 값이든 String datatype으로 변환해서 입력 가능하다.
+
+print("I have %s apples" % 3)
+print("rate is %s" % 3.234)
+
+# 포매팅 연산자 %d와 %를 같이 쓸 때는 %%를 쓴다.
+
+print("Error is %d%%.\n" % 98)
+
+# 포캣 코드와 숫자 함께 사용하기
+
+print("포맷 코드와 숫자 함께 사용하기\n")
+
+# 1.정렬과 공백
+
+print("%10s" % "hi")
+print("%-10sjane" % "hi")
+
+# 2.소수점 표현하기
+print("%0.4f" % 3.42134234)
+print("%10.4f\n" % 3.42134234)
+
+# 문자열 관련 함수들
+
+print("문자열 관련 함수들\n")
+
+# 문자 개수 세기(count)
+
+a = "hobby"
+a.count('b')
+print(a.count('b'))
+
+# 문자 위치 알려주기(find)
+
+a = "Python is best choice"
+
+a.find('b')
+print(a.find('b'))
+
+a.find('k')
+print(a.find('k'))
+
+# 문자 위치알려주기2(index)
+
+a = "Life is too short"
+
+a.index('t')
+print(a.index('t'))
+
+# 문자열 삽입(join)
+
+a = ","
+a.join('abcd')
+print(a.join('abcd'))
+
+# 소문자를 대문자로 바꾸기(upper)
+
+a = "hi"
+a.upper()
+print(a.upper())
+
+# 대문자를 소문자로 바꾸기(lower)
+
+a = "HI"
+a.lower()
+print(a.lower())
+
+# 왼쪽 공백 지우기(lstrip)
+
+a = " hi "
+a.lstrip()
+print(a.lstrip())
+
+# 오른쪽 공백 지우기(rstrip)
+
+a = " hi "
+a.rsplit()
+print(a.rstrip())
+
+# 양쪽 공백 지우기(strip)
+
+a = " hi "
+a.strip()
+print(a.strip())
+
+# 문자열 바꾸기(replace)
+
+a = "Life is too short"
+a.replace("Life", "Your leg")
+print(a.replace("Life", "Your leg"))
+
+# 문자열 나누기(split)
+
+a = "Life is too short"
+a.split()
+print(a.split())
+
+# 고급 문자열 포매팅
+
+print("\n고급 문자열 포매팅\n")
+
+# 숫자 바로 대입하기
+"I eat {0} apples".format(3)
+print("I eat {0} apples".format(3))
+
+#문자열 바로 대입하기
+"I eat {0} apples".format("five")
+print("I eat {0} apples".format("five"))
+
+#숫자 값을 가진 변수로 대입하기
+
+number = 3
+"I eat {0} apples".format(number)
+print("I eat {0} apples".format(number))
+
+#2개 이상의 값 넣기
+
+number = 10
+day = "three"
+"I ate {0} apples. so I was sick for {1} days".format(number,day)
+print("I ate {0} apples. so I was sick for {1} days".format(number,day))
+
+#이름으로 넣기
+
+"I ate {number} apples. so I was sick for {day} days.".format(number=10, day=3)
+print("I ate {number} apples. so I was sick for {day} days.".format(number=10, day=3))
+
+#인덱스와 이름을 혼용해서 넣기
+
+"I ate {0} apples. so I was sick for {day} days.".format(10, day=3)
+print("I ate {0} apples. so I was sick for {day} days.".format(10, day=3))
+
+#왼쪽 정렬(:<)
+
+"{0:<10}".format("hi")
+print("{0:<10}".format("hi"))
+
+#오른쪽 정렬(:>)
+
+"{0:>10}".format("hi")
+print("{0:>10}".format("hi"))
+
+#가운데 정렬(^)
+
+"{0:^10}".format("hi")
+print("{0:^10}".format("hi"))
+
+#공백 채우기
+
+"{0:=^10}".format("hi")
+print("{0:=^10}".format("hi"))
+
+"{0:!<10}".format("hi")
+print("{0:!<10}".format("hi"))
+
+#소수점 표현하기
+
+y = 3.42134234
+"{0:0.4f}".format(y)
+print("{0:0.4f}".format(y))
+
+"{0:10.4f}".format(y)
+print("{0:10.4f}".format(y))
+
+#{ 또는 } 문자 표현하기
+
+"{{ and }}".format()
+print("{{ and }}".format())
