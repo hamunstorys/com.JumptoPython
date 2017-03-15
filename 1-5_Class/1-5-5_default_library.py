@@ -288,3 +288,173 @@ print(list(map(two_times, [1, 2, 3, 4])))
 
 list(map(lambda a: a * 2, [1, 2, 3, 4]))
 print(list(map(lambda a: a * 2, [1, 2, 3, 4])))
+
+# max
+# max(ierable)는 인수로 반복 가능한 자료형을 입력받아 그 최대갑을 리턴한다.
+
+print("\nmax\n")
+
+max([1, 2, 3])
+print(max([1, 2, 3]))
+
+max("python")
+print(max("pyhon"))
+
+# min
+# min(iterable)은 max 함수와 반대로, 인수로 반복 가능한 자료형을 입력받아 그 최소값을 리턴하는 함수이다.
+
+print("\nmin\n")
+
+min([1, 2, 3])
+print(min([1, 2, 3]))
+
+min("python")
+print(min("python"))
+
+# oct
+# oct(x)는 정수 형태의 숫자를 8진수 문자열로 바꾸어 리턴하는 함수이다.
+
+print("\noct(x)\n")
+
+oct(34)
+print(oct(34))
+
+oct(12345)
+print(oct(12345))
+
+# open
+# open(filename, [mode])은 '파일 이름'과 '읽기 방법'을 입력받아 파일 객체를 리턴하는 함수이다. 읽기 방법(mode)이 생략되면 기본값인 읽기 전용 모드(r)로 파일 객체를 만들어 리턴한다.
+
+# w : 쓰기 모드로 파일 열기
+# r : 읽기 모드로 파일 열기
+# a : 추가 모드로 파일 열기
+# b : 바이너리 모드로 파일 열기
+
+print("\nopen\n")
+
+# b는 w,r,a와 함께 사용된다.
+# f = open("binary_fiel", "rb")
+
+# fread = open("read_mode.txt", "r")
+# fread2 = open("read_mode.txt")
+
+# ord
+# ord(c)는 문자의 아스키 코드값을 리턴하는 함수이다.
+# ord(c) 함수는 chr함수와는 반대이다.
+
+print("\nord\n")
+
+ord('a')
+print(ord('a'))
+
+ord('0')
+print(ord('0'))
+
+# pow
+# pow(x,y)는 x의 y 제곱한 결과값을 리턴하는 함수이다.
+
+print('\npow\n')
+
+pow(2, 4)  # 2의 4 제곱
+print(pow(2, 4))
+
+pow(3, 3)  # 3의 3제곱
+print(pow(3, 3))
+
+# range
+# range([start,]stop[,step])는 for문과 함께 자주 사용되는 함수이다. 이 함수는 입력받은 숫자에 해당되는 범위의 값을 반복 가능한 객체로 만들어 리턴한다.
+
+print("\nrange\n")
+
+# 인수가 하나일 경우
+# 시작 숫자를 지정해주지 않으면 range 함수는 0부터 시작한다.
+
+list(range(5))
+print(list(range(5)))
+
+# 인수가 2개일 경우
+# 입력으로 주어지는 2개의 이누는 시작 숫자와 끝 숫자를 나타낸다. 단, 끝 숫자는 해당 범위에 포함되지 않는다는 것을 주의
+
+list(range(5, 10))
+print(list(range(5, 10)))  # 끝 숫자 10은 포함되지 않음
+
+# 인수가 3개일 경우
+# 세번째 인수는 숫자 사이의 거리를 말한다.
+
+list(range(1, 10, 2))
+print(list(range(1, 10, 2)))  # 1부터 9까지, 숫자 사이의 거리는 2
+
+list(range(1, -10, -1))
+print(list(range(1, -10, -1)))  # 0부터 -9까지, 숫자 사이의 거리는 -1
+
+# sorted
+# sorted(ierable) 함수는 입력값을 정렬한 후 그 결과를 리스트로 리턴하는 함수이다.
+
+print("\nsorted\n")
+
+sorted([3, 1, 2])
+print(sorted([3, 1, 2]))
+
+sorted(['a', 'c', 'b'])
+print(sorted(['a', 'c', 'b']))
+
+sorted("zero")
+print(sorted("zero"))
+
+# 리스트 자료형에도 sort라는 하무가 있다. 하지만 자료형의 sort 함수는 리스트 객체 그 자체를 정렬만 할 뿐 정렬된 결과를 리턴하지는 않는다.
+
+a = [3, 1, 2]
+result = a.sort()
+print(result)
+
+# str
+# str(object)은 문자열 형태로 객체를 변환하여 리턴하는 함수이다.
+
+str(3)
+print(str(3))
+str('hi')
+print(str('hi'))
+str('hi'.upper())
+print(str('hi'.upper()))
+
+# tuple
+# tuple(iterable)은 반복 가능한 자료형을 입력받아 튜플 형태로 바꾸어 리턴하는 함수이다. 만약 튜플이 입력으로 들어오면 그대로 리턴한다.
+
+print("\ntuple\n")
+
+tuple("abc")
+print(tuple("abc"))
+
+tuple([1, 2, 3])
+print(tuple([1, 2, 3]))
+
+tuple((1, 2, 3))
+print(tuple((1, 2, 3)))
+
+# type
+# type(object)은 입력값의 자료형이 무엇인지 알려주는 함수이다.
+
+print("\ntype\n")
+
+type("abc")
+print(type("abc"))  # "abc" 문자열 자료형(str)
+
+type([])
+print(type([]))  # []은 리스트 자로형(list)
+
+type(open("test", 'w'))
+print(type(open("test", 'w')))  # 파일 자료형 io.TextIOWrapper
+
+# zip
+# zip(iterable)은 동일한 개ㅜ로 이루어진 자료형을 묶어 주는 역할을 하는 함수이다. 잘 이해 되지 않는다면 다음 예제를 살펴보자
+
+print("\nzip\n")
+
+list(zip([1, 2, 3], [4, 5, 6]))
+print(list(zip([1, 2, 3], [4, 5, 6])))
+
+list(zip([1, 2, 3], [4, 5, 6], [7, 8, 9]))
+print(list(zip([1, 2, 3], [4, 5, 6], [7, 8, 9])))
+
+list(zip("abc", "def"))
+print(list(zip("abc", "def")))
