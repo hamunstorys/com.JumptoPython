@@ -12,10 +12,13 @@ def find_multiple_number(maxrange, matterfactor):
                 result.append(number)
     else:
         for number in range(1, maxrange):
-            if number % matterfactor[count] == 0 and type(matterfactor[count]) != float:
+            if number % matterfactor[count] == 0:
                 result.append(number)
                 if count < len(matterfactor) - 1:
                     count += 1
                 else:
                     count = 0
     return result
+
+
+print(find_multiple_number(1000, [3, 4]))
